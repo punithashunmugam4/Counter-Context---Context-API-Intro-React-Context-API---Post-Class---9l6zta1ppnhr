@@ -4,12 +4,12 @@ import React, { createContext, useContext, useState } from "react";
 
 
 
-const counterContext = createContext(1)
+const counterContext = createContext()
 
 
 const CounterStateContext = (props) => {
-    const lev=useContext(counterContext)
-    const [count,setCount]=useState(lev)
+    // const lev=useContext(counterContext)
+    const [count,setCount]=useState(1)
     return (
         <div id="counter-context">
             <counterContext.Provider value={{ count, setCount }}>
